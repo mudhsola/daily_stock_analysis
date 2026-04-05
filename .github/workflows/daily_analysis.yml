@@ -309,9 +309,3 @@ jobs:
             echo "📜 最近日志（最后 30 行）:"
             tail -30 logs/stock_analysis_*.log 2>/dev/null || echo "无日志"
           fi
-      
-      - name: 部署到 GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         publish_dir: ./report  # 你的分析报告生成目录（和代码里一致）
